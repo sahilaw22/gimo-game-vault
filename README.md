@@ -1,35 +1,9 @@
-
 <!-- Title & Subtitle -->
 <div align="center">
   <h1 style="font-weight: 900; font-size: 48px; margin-bottom: 0;"><b>GIMO - Game Vault</b></h1>
-  <p style="font-size: 18px; color: #94A3B8; margin-top: 4px; font-weight: 600;">Store. Organize. Play.</p>
+  <h3 style="font-size: 18px; color: #94A3B8; margin-top: 4px; font-weight: 600;">Store. Organize. Play.</h3>
 </div>
-
-<!-- Sliding SVG Animated Divider -->
-<div align="center">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 12" width="100%" height="12">
-    <style>
-      .animated-divider {
-        stroke: url(#dividerGrad);
-        stroke-width: 4;
-        stroke-dasharray: 15, 12;
-        animation: march 2.5s linear infinite;
-      }
-      @keyframes march {
-        to { stroke-dashoffset: -54; }
-      }
-    </style>
-    <defs>
-      <linearGradient id="dividerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#d6c2c5" />
-        <stop offset="50%" stop-color="#FFB300" />
-        <stop offset="100%" stop-color="#FE4A60" />
-      </linearGradient>
-    </defs>
-    <line x1="0" y1="6" x2="800" y2="6" class="animated-divider" />
-  </svg>
-</div>
-
+<br>
 <div align="center">
   
   [![Tech Stack](https://img.shields.io/badge/Stack-Vanilla_HTML_/_CSS_/_JS-E34F26?style=flat-brutal&logo=html5&logoColor=white)](#technology-stack)
