@@ -1,7 +1,8 @@
 <!-- Title & Subtitle -->
 <div align="center">
-  <h1 style="font-weight: 900; font-size: 48px; margin-bottom: 0;"><b>GIMO - Game Vault</b></h1>
-  <h3 style="font-size: 18px; color: #94A3B8; margin-top: 4px; font-weight: 600;">Store. Organize. Play.</h3>
+  <img width="1280" height="420" alt="IMG_20260806_215150" src="https://github.com/user-attachments/assets/e6eb247a-953b-4141-b47d-8b851424f4ca" />
+
+  <h2 style="font-size: 18px; color: #94A3B8; margin-top: 4px; font-weight: 600;">𝗦𝘁𝗼𝗿𝗲. 𝗢𝗿𝗴𝗮𝗻𝗶𝘇𝗲. 𝗣𝗹𝗮𝘆.</h2>
 </div>
 <br>
 <div align="center">
@@ -12,7 +13,7 @@
   
 </div>
 
-## Project Description
+## 𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻
 
 Gimo is a simple, beautiful, and secure local vault to save your gaming usernames, passwords, and accounts. It runs entirely on client-side storage, requires no external databases or servers, and stores all entries inside your browser cache.
 
@@ -20,7 +21,7 @@ Built with a bold, high-contrast dark theme (Neo-Brutalism), it turns into a con
 
 ---
 
-## Key Features
+<div align="center"><h2>𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀</h2></div>
 
 | Feature | Description |
 | :--- | :--- |
@@ -33,7 +34,7 @@ Built with a bold, high-contrast dark theme (Neo-Brutalism), it turns into a con
 
 ---
 
-## Architecture
+## 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲
 
 The project is structured modularly for easy editing, production builds, and fast loading speeds:
 
