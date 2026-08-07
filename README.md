@@ -1,116 +1,81 @@
-# Gimo/// Gaming Credentials Vault
-
 <div align="center">
-  <img width="1280" height="420" alt="Gimo Vault Header" src="https://github.com/user-attachments/assets/e6eb247a-953b-4141-b47d-8b851424f4ca" />
+  <img width="1280" height="420" alt="IMG_20260806_215150" src="https://github.com/user-attachments/assets/e6eb247a-953b-4141-b47d-8b851424f4ca" />
 
-  <h3 align="center">Store. Organize. Play.</h3>
-  <p align="center">A sleek, privacy-focused local gaming credentials manager built for speed and visual excellence.</p>
-
-  [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-  [![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-  [![License](https://img.shields.io/badge/License-MIT-emerald?style=flat-square)](#license)
+  <h2 style="font-size: 18px; color: #94A3B8; margin-top: 4px; font-weight: 600;">𝗦𝘁𝗼𝗿𝗲. 𝗢𝗿𝗴𝗮𝗻𝗶𝘇𝗲. 𝗣𝗹𝗮𝘆.</h2>
+</div>
+<br>
+<div align="center">
+  
+  [![Tech Stack](https://img.shields.io/badge/Stack-Vanilla_HTML_/_CSS_/_JS-E34F26?style=flat-brutal&logo=html5&logoColor=white)](#technology-stack)
+  [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-brutal)](#)
+  [![Style](https://img.shields.io/badge/Design-Neo--Brutalist-FFC480?style=flat-brutal)](#design-aesthetics)
+  
 </div>
 
----
+## 𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻
 
-## 🎮 Overview
+Gimo is a simple, beautiful, and secure local vault to save your gaming usernames, passwords, and accounts. It runs entirely on client-side storage, requires no external databases or servers, and stores all entries inside your browser cache.
 
-**Gimo///** is a modern, client-side gaming credentials vault. Keep track of your gaming accounts, passwords, linked emails, and recovery notes across Steam, Epic Games, Ubisoft, Xbox, Rockstar, and mobile platforms — all stored safely in your browser's local storage.
-
-No external databases, no cloud tracking, zero hassle.
+Built with a bold, high-contrast dark theme (Neo-Brutalism), it turns into a convenient floating pill button on mobile views so you can copy, edit, or add credentials on the go with single taps.
 
 ---
 
-## ✨ Features
+<div align="center"><h2>𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀</h2></div>
 
-- **3D Coverflow Carousel**: Interactive 3D banner carousel with 3000ms continuous autoscroll and keyboard navigation for your favorite games.
-- **Glitch Text Preloader**: Custom glowing neon scanline text preloader.
-- **Brand Platform Badges**: Official badges and solid corner color fills for Steam, Epic Games, Ubisoft, Xbox, Rockstar, and Play Store.
-- **1-Click Copy**: Copy usernames, passwords, linked emails, or recovery notes to your clipboard with instant feedback.
-- **Mobile-First Responsive Layout**: Stacked mobile header with quick search, category filtering pills, and touch-optimized navigation.
-- **Client-Side Privacy**: 100% offline data persistence using browser `localStorage` with versioned migrations.
-
----
-
-## 🛠️ Tech Stack
-
-- **Framework**: React 18 + TypeScript
-- **Build Tool**: Vite 6
-- **Styling**: Tailwind CSS
-- **Animation & Graphics**: Three.js + Framer Motion
-- **Icons**: Lucide React + Simple Icons (Official Brand SVGs)
+| Feature | Description |
+| :--- | :--- |
+| **Clean Vault** | Organizes usernames, passwords, linked emails, email passwords, and notes. |
+| **Platform Badges** | Supports Steam, Epic Games, Ubisoft, Xbox, and Rockstar tags with custom colors. |
+| **Floating Action Button** | Relocates to the bottom-right corner on mobile view for easy thumb access. |
+| **View Transitions** | Switch themes smoothly with a custom Shigure Ui Dance GIF transition mask. |
+| **Dark Theme** | Sleek space black colors designed for visual comfort in low-light environments. |
+| **Local Storage Sync** | Automatically saves and reads credentials from your browser with version tracking. |
 
 ---
 
-## 🚀 Getting Started
+## 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲
 
-### Prerequisites
+The project is structured modularly for easy editing, production builds, and fast loading speeds:
 
-Make sure you have **Node.js** (v18 or higher) and **npm** installed.
+```mermaid
+graph TD
+    Root[Gimo Project Root] --> index[index.html]
+    Root --> SrcDir[src/]
+    Root --> AssetsDir[assets/]
+    
+    SrcDir --> css[style.css]
+    SrcDir --> js[app.js]
+    
+    AssetsDir --> icon[gimo-controller-icon.png]
+```
 
-### Installation
+* **`index.html`**: Core HTML5 markup containing the render-blocking theme detector.
+* **`src/style.css`**: CSS stylesheet detailing layouts, animations, and custom media queries.
+* **`src/app.js`**: Core controller containing rendering, storage sync, and clipboard functions.
+* **`assets/`**: Static logo and cover banner image assets.
+
+---
+
+## Getting Started
+
+No bundlers, dependencies, or build configurations required. Simply load the entry file locally:
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/sahilaw22/gimo-game-vault.git
+# 1. Clone the project
+git clone https://github.com/your-username/Gimo.git
 
-# 2. Enter the project directory
-cd gimo-game-vault
+# 2. Enter directory
+cd Gimo
 
-# 3. Install dependencies
-npm install
-
-# 4. Start the local development server
-npm run dev
+# 3. Serve local server or open index.html directly
+python -m http.server 8000
 ```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-### Building for Production
-
-```bash
-npm run build
-```
-
-The optimized static build files will be generated inside the `dist/` directory.
+Then visit `http://localhost:8000` inside your browser.
 
 ---
 
-## 📁 Project Structure
+## License
 
-```
-gimo-game-vault/
-├── components/
-│   └── ui/
-│       └── coverflow-carousel.tsx   # 3D Coverflow Carousel component
-├── src/
-│   ├── components/
-│   │   ├── AddCredentialModal.tsx   # Add/Edit credential modal
-│   │   ├── CredentialCard.tsx       # Credential card component with platform badges
-│   │   ├── GameDetailsModal.tsx     # Game details pop-up modal
-│   │   ├── GimoHeader.tsx           # Responsive header with mobile layout & search
-│   │   ├── GimoPreloader.tsx        # React Bits scanline glitch preloader
-│   │   └── GlitchText.tsx           # Glitch text animation component
-│   ├── data/
-│   │   └── initialCredentials.ts    # Initial demo credentials dataset
-│   ├── App.tsx                      # Main application logic & LocalStorage manager
-│   ├── index.css                    # Design system tokens & scanline styles
-│   └── main.tsx                     # React root entry point
-├── index.html                       # HTML5 entry page
-├── package.json
-└── vite.config.ts
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-
-## 👤 Author
-
-Made by **[@sahilaw22](https://github.com/sahilaw22)** — for gamers.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
