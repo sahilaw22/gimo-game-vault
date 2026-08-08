@@ -1,81 +1,121 @@
-<div align="center">
-  <img width="1280" height="420" alt="IMG_20260806_215150" src="https://github.com/user-attachments/assets/e6eb247a-953b-4141-b47d-8b851424f4ca" />
+<h1 align="center"><img src="https://github.com/user-attachments/assets/540bec4e-f097-426a-becd-4530b177e445" alt="logo" width="45"/> Gimo - One place, all your games </h1>
 
-  <h2 style="font-size: 18px; color: #94A3B8; margin-top: 4px; font-weight: 600;">𝗦𝘁𝗼𝗿𝗲. 𝗢𝗿𝗴𝗮𝗻𝗶𝘇𝗲. 𝗣𝗹𝗮𝘆.</h2>
-</div>
+#### A secure local vault to save your gaming usernames, passwords, and accounts from any platform.
 <br>
-<div align="center">
-  
-  [![Tech Stack](https://img.shields.io/badge/Stack-Vanilla_HTML_/_CSS_/_JS-E34F26?style=flat-brutal&logo=html5&logoColor=white)](#technology-stack)
-  [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-brutal)](#)
-  [![Style](https://img.shields.io/badge/Design-Neo--Brutalist-FFC480?style=flat-brutal)](#design-aesthetics)
-  
-</div>
 
-## 𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻
+![Hero GIF](https://github.com/user-attachments/assets/255701af-c81b-472e-a5af-f40e2f4a7ca7)
 
-Gimo is a simple, beautiful, and secure local vault to save your gaming usernames, passwords, and accounts. It runs entirely on client-side storage, requires no external databases or servers, and stores all entries inside your browser cache.
+> I added some demo entries to explore it before adding anything real.
 
-Built with a bold, high-contrast dark theme (Neo-Brutalism), it turns into a convenient floating pill button on mobile views so you can copy, edit, or add credentials on the go with single taps.
+<p align="center">
+  <a href="https://your-demo-url.com" target="_blank">
+    <img src="https://shieldcn.dev/badge/Try_it_yourself-FF9800?style=for-the-badge" alt="Open App" />
+  </a>
+</p>
 
----
+## Why I built it
 
-<div align="center"><h2>𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀</h2></div>
+<p>I play elden ring, gtav and fifa, all on different platforms. Every game has its own account, linked email, and password, and some of those emails are random that I created years ago and have almost completely forgotten. Most password managers are built around keeping one login and password together, which doesn’t really fit how gaming accounts work.
 
-| Feature | Description |
-| :--- | :--- |
-| **Clean Vault** | Organizes usernames, passwords, linked emails, email passwords, and notes. |
-| **Platform Badges** | Supports Steam, Epic Games, Ubisoft, Xbox, and Rockstar tags with custom colors. |
-| **Floating Action Button** | Relocates to the bottom-right corner on mobile view for easy thumb access. |
-| **View Transitions** | Switch themes smoothly with a custom Shigure Ui Dance GIF transition mask. |
-| **Dark Theme** | Sleek space black colors designed for visual comfort in low-light environments. |
-| **Local Storage Sync** | Automatically saves and reads credentials from your browser with version tracking. |
+That’s where <b>Gimo</b> comes in. It keeps your game account, linked email, and passwords together in one place, so everything is easy to find when you need it. Everything stays in your browser and nothing leaves your device.</p>
 
----
+## Features
 
-## 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲
+- **Account Management:** Keep game accounts, credentials, linked emails, and notes organized in one centralized vault.
+- **Multi-Platform Support:** Manage accounts across popular gaming platforms including Steam, Epic Games, Ubisoft, Xbox and Rockstar.
+- **Search & Discover:** Instantly find accounts using game name, username, email, notes, or platform filters.
+- **Game Library:** Pin frequently used games and personalize entries with game artwork for quick identification.
+- **Seamless Experience:** Keep your data available across sessions with a clean interface optimized for desktop, tablet, and mobile.
 
-The project is structured modularly for easy editing, production builds, and fast loading speeds:
+## How to run it locally
 
-```mermaid
-graph TD
-    Root[Gimo Project Root] --> index[index.html]
-    Root --> SrcDir[src/]
-    Root --> AssetsDir[assets/]
-    
-    SrcDir --> css[style.css]
-    SrcDir --> js[app.js]
-    
-    AssetsDir --> icon[gimo-controller-icon.png]
-```
-
-* **`index.html`**: Core HTML5 markup containing the render-blocking theme detector.
-* **`src/style.css`**: CSS stylesheet detailing layouts, animations, and custom media queries.
-* **`src/app.js`**: Core controller containing rendering, storage sync, and clipboard functions.
-* **`assets/`**: Static logo and cover banner image assets.
-
----
-
-## Getting Started
-
-No bundlers, dependencies, or build configurations required. Simply load the entry file locally:
+**Requirements:** Node.js 18+
 
 ```bash
-# 1. Clone the project
-git clone https://github.com/your-username/Gimo.git
-
-# 2. Enter directory
-cd Gimo
-
-# 3. Serve local server or open index.html directly
-python -m http.server 8000
+git clone https://github.com/sahilaw22/gimo-game-vault.git
+cd gimo-game-vault
+npm install
+npm run dev
 ```
-Then visit `http://localhost:8000` inside your browser.
 
----
+> Open `http://localhost:5173` in your browser.
+
+## How It Works
+
+Gimo is a React SPA with no backend. Credentials are stored as a typed `CredentialItem[]` array in `localStorage` under a versioned key (`gimo_credentials_vault_v11`). On mount, the app reads from storage and falls back to a set of demo entries if nothing is found. Every state mutation — add, edit, delete, favourite toggle — calls a single `saveCredentials()` helper that updates both React state and storage atomically.
+
+The Coverflow carousel is a custom component built on CSS 3D transforms (`perspective`, `rotateY`, `translateX`, `translateZ`). Each card's transform is derived from its offset from the active index, with a configurable depth and falloff — no library involved.
+
+The glitch effect on the "Gimo" wordmark uses a `<canvas>`-based `ASCIIText` renderer that samples character cells at a controlled frame rate, producing the scanline distortion without any CSS animation overhead.
+
+## How It Works
+
+| Step        | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| **Storage** | Credentials are saved in `localStorage` under a versioned key (`gimo_credentials_vault_v11`). |
+| **Startup** | On load, the app reads from storage or falls back to demo entries.          |
+| **Updates** | All changes (add, edit, delete, favourite) go through `saveCredentials()`, which updates React state and storage together. |
+
+### Coverflow Carousel
+
+| Aspect            | Details                                                               |
+|-------------------|-----------------------------------------------------------------------|
+| **Implementation**| Built with CSS 3D transforms (`perspective`, `rotateY`, `translateX`, `translateZ`). |
+| **Behavior**      | Each card’s position is based on its offset from the active index, with adjustable depth and falloff. |
+| **Libraries**     | None — fully handcrafted.                                             |
+
+### Glitch Effect
+
+| Aspect            | Details                                                               |
+|-------------------|-----------------------------------------------------------------------|
+| **Renderer**      | `<canvas>`‑based `ASCIIText` renderer.                                |
+| **Mechanism**     | Samples character cells at a set frame rate to create a scanline distortion effect. |
+| **Animations**    | No CSS animations — entirely canvas logic.                            |
+
+## Tech Stack
+
+<div align="center">
+
+  <!-- First row: main stack -->
+  <a href="#technology-stack">
+    <img src="https://shieldcn.dev/badge/React_18_+_TypeScript-3178C6?style=flat-square" alt="React + TS" />
+  </a>
+  <a href="#technology-stack">
+    <img src="https://shieldcn.dev/badge/Vite_6-646CFF?style=flat-square" alt="Vite" />
+  </a>
+  <a href="#technology-stack">
+    <img src="https://shieldcn.dev/badge/Tailwind_CSS_v3-06B6D4?style=flat-square" alt="Tailwind CSS" />
+  </a>
+  <a href="#technology-stack">
+    <img src="https://shieldcn.dev/badge/Three.js_+_Canvas-000000?style=flat-square" alt="Three.js + Canvas" />
+  </a>
+
+  <br/>
+
+  <!-- Second row: supporting tools -->
+  <a href="#technology-stack">
+    <img src="https://shieldcn.dev/badge/Lucide_React-FF4088?style=flat-square" alt="Lucide React" />
+  </a>
+    <a href="#technology-stack">
+    <img src="https://shieldcn.dev/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+  </a>
+  <a href="#technology-stack">
+    <img src="https://shieldcn.dev/badge/localStorage-2C2C2C?style=flat-square" alt="localStorage" />
+  </a>
+
+</div>
+
+
+## Contributing
+We currently aren't accepting contributions, but I appreciate your interest! If you have suggestions or feedback, please reach out to me at **sahilaw502@gmail.com**
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+<p>The source code for this project is made available for **viewing and educational purposes only**.  
+Unauthorized copying, modification, distribution, or commercial use of this material without explicit written permission from the copyright holder is strictly prohibited.</p>
 
----
+Copyright © 2026 **Gimo**. All rights reserved.
+
+
+
+
