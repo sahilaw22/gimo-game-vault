@@ -13,6 +13,15 @@
   </a>
 </p>
 
+## Content
+
+  - <a href="#why-i-built-it">Why I Built It</a>
+  - <a href="#features"> Its Features</a>
+  - <a href="#how-to-run-it-locally">How to run Locally</a>
+  - <a href="#how-it-works">How Its Work</a>
+  - <a href="#tech-stack">Tech tack</a>
+
+
 ## Why I built it
 
 <p>I play elden ring, gtav and fifa, all on different platforms. Every game has its own account, linked email, and password, and some of those emails are random that I created years ago and have almost completely forgotten. Most password managers are built around keeping one login and password together, which doesn’t really fit how gaming accounts work.
