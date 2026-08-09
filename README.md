@@ -8,7 +8,7 @@
 > I added some demo entries to explore it before adding anything real.
 
 <p align="center">
-  <a href="https://your-demo-url.com" target="_blank">
+  <a href="https://gimo-alpha.vercel.app/" target="_blank">
     <img src="https://shieldcn.dev/badge/Try_it_yourself-FF9800?style=for-the-badge" alt="Open App" />
   </a>
 </p>
