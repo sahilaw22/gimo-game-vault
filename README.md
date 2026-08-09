@@ -51,13 +51,7 @@ npm run dev
 
 ## How It Works
 
-Gimo is a React SPA with no backend. Credentials are stored as a typed `CredentialItem[]` array in `localStorage` under a versioned key (`gimo_credentials_vault_v11`). On mount, the app reads from storage and falls back to a set of demo entries if nothing is found. Every state mutation — add, edit, delete, favourite toggle — calls a single `saveCredentials()` helper that updates both React state and storage atomically.
-
-The Coverflow carousel is a custom component built on CSS 3D transforms (`perspective`, `rotateY`, `translateX`, `translateZ`). Each card's transform is derived from its offset from the active index, with a configurable depth and falloff — no library involved.
-
-The glitch effect on the "Gimo" wordmark uses a `<canvas>`-based `ASCIIText` renderer that samples character cells at a controlled frame rate, producing the scanline distortion without any CSS animation overhead.
-
-## How It Works
+Gimo is a React SPA with no backend. 
 
 | Step        | Description                                                                 |
 |-------------|-----------------------------------------------------------------------------|
