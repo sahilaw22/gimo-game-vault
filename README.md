@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://github.com/user-attachments/assets/540bec4e-f097-426a-becd-4530b177e445" alt="logo" width="45"/> Gimo - One place, all your games </h1>
+<h1 align="center"><img src="https://github.com/user-attachments/assets/540bec4e-f097-426a-becd-4530b177e445" alt="logo" width="45"/> Gimo - Store your game accounts </h1>
 
 #### A secure local vault to save your gaming usernames, passwords, and accounts from any platform.
 <br>
